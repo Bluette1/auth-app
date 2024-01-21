@@ -2,13 +2,14 @@ const createError = require('http-errors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const config = require('./config');
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const authRouter = require('./routes/auth');
 
 const app = express();
-
-// view engine setup
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/login', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -27,11 +29,12 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = config.env === 'development' ? err : {};
 
-  // render the error page
+
+  // return error
   res.status(err.status || 500);
-  res.render('error');
+  res.send({'error':  err});
 });
 
 module.exports = app;
