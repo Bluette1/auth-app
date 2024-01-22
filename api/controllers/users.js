@@ -1,16 +1,24 @@
 const { createUser, getUser} = require('../state/users');
 const normalizeEmail = require('normalize-email');
+const createError = require('http-errors');
 
 class UsersController {
 
   static getOneById = async (req, res, next) => {
     const id = req.params.id;
-    const user = getUser(id);
+
+    const user = await getUser(id);
+    if (!user) {
+      return next(createError(404, `User with ID ${id} not found`));
+    }
     res.status(200).send(user);
   };
 
   static newUser = async (req, res, next) => {
     const { email, password, username } = req.body;
+    if (!(email && password))
+      return next(createError(400, 'Email and password are required'));
+
     let user;
     try {
       user = await createUser(
@@ -20,9 +28,7 @@ class UsersController {
       );
       res.status(201).send(user);
     } catch (error) {
-      return res
-        .status(400)
-        .send({ code: 400, message: JSON.stringify(error) });
+      next(createError(400, error.message))
     }
   };
 }

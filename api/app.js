@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 const config = require('./config');
 
 
@@ -12,6 +13,16 @@ const authRouter = require('./routes/auth');
 const app = express();
 
 app.use(logger('dev'));
+const connectDb = async () => {
+await mongoose.connect(config.mongo.uri, {
+    autoIndex: true,
+    minPoolSize: 50,
+    serverSelectionTimeoutMS: 5000,
+  });
+}
+
+connectDb();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -27,12 +38,6 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = config.env === 'development' ? err : {};
-
-
-  // return error
   res.status(err.status || 500);
   res.send({'error':  err});
 });
