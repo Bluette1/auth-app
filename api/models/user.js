@@ -35,7 +35,7 @@ const UserSchema = new mongoose.Schema(
       unique: true,
       validate: {
         validator: checkUsername,
-        message: 'Username validation failed',
+        message: 'Username validation failed: forbidden word(s)',
       },
     },
     email: {

@@ -23,7 +23,7 @@ body {
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.25rem;
-  background-image: url("./assets/login_background_desktop.png");
+  background-image: url("../assets/login_background_desktop.png");
   background-repeat: no-repeat;
   background-color: rgb(203, 203, 227);
   font-family: "Open Sans", sans-serif;
@@ -115,68 +115,9 @@ img {
   opacity: 0.97;
 }
 
-.register-btn.hide {
-  display: none;
-}
-
-.signup {
-  position: absolute;
-  top: 45%;
-  left: 70%;
-  z-index: 2000;
-  background-color: #587a7a;
-  padding: 2%;
-  margin: 2%;
-}
-
-.signup h3 {
-  text-align: center;
-  color: #ffffff;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2%;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 1.688rem;
-}
-
-input {
-  border-radius: 5rem;
-  height: 35px;
-  width: 22vw;
-  padding: 3%;
-}
-
-.signup button {
-  margin-top: 3rem;
-}
-
-@media only screen and (max-width: 1024px) {
-  .signup {
-    left: 12%;
-    z-index: 2000;
-    background-color: unset;
-    background-color: #587a7a;
-    padding: 6%;
-    margin: 1%;
-  }
-
-  input {
-    border-radius: 5rem;
-    height: 35px;
-    width: 45vw;
-    padding: 3%;
-  }
-}
 @media only screen and (max-width: 768px) {
   body {
-    background-image: url("./assets/login_background_mobile.png");
+    background-image: url("../assets/login_background_mobile.png");
   }
 
   h1 {
@@ -196,16 +137,5 @@ input {
   .img-logo {
     display: flex;
     justify-content: center;
-  }
-
-  .signup {
-    left: 8%;
-  }
-
-  input {
-    border-radius: 5rem;
-    height: 35px;
-    width: 70vw;
-    padding: 3%;
   }
 }
