@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
@@ -13,6 +14,12 @@ const authRouter = require('./routes/auth');
 const app = express();
 
 app.use(logger('dev'));
+
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 const connectDb = async () => {
 await mongoose.connect(config.mongo.uri, {
     autoIndex: true,

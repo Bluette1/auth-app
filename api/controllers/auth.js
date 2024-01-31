@@ -31,7 +31,7 @@ class AuthController {
       }
     );
 
-    res.send({ token, ...user });
+    res.send({ token, user });
   };
 }
 module.exports = AuthController;

@@ -1,8 +1,24 @@
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import { logout } from "../actions/auth";
 import logo from "../assets/logo.png";
 import "../styles/Profile.css";
+import MarkIcon from "./markicon";
 
 const Profile = () => {
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const { user } = useSelector((state) => state.auth);
+
+  const signOut = () => {
+    localStorage.clear();
+    dispatch(logout());
+    navigate("/");
+  };
+
   return (
     <>
       <div>
@@ -12,15 +28,22 @@ const Profile = () => {
         <section className="logo-area">
           <h1>Secure profile</h1>
         </section>
-        <main className="">
+        <main>
           <>
             <article className="">
-              <h4 className="welcome" onClick={register}>
-                `Welcome, ${username}!`
-              </h4>
-              <h4 className="message" onClick={register}>
-                You're set up now.
-              </h4>
+              <section className="logged-in">
+                {" "}
+                <>
+                  <MarkIcon />
+                  {user && (
+                    <h4 className="welcome">{`Welcome, ${user.username}!`}</h4>
+                  )}
+                </>
+              </section>
+
+              <button className="register-btn" onClick={signOut}>
+                Logout
+              </button>
             </article>
           </>
         </main>
