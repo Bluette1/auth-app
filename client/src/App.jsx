@@ -8,7 +8,7 @@ function App() {
   const { loggedIn } = useSelector((state) => state.auth);
 
   return (
-    <div className="App">
+    <div data-testid='app' className="App">
       <Routes>
         <Route element={loggedIn ? <Profile /> : <Home />} path="/" />
         <Route
