@@ -23,7 +23,6 @@ const Home = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
-  const [isDisabled, setDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
   const dispatch = useDispatch();
@@ -74,8 +73,6 @@ const Home = () => {
             });
 
             const { user, token } = await response.json();
-            console.log("User)))))))))))))))))))))))", user);
-            console.log("Token)))))))))))))))))))))))", token);
             user.token = token;
             localStorage.setItem("user", JSON.stringify(user));
             dispatch(login(user));
@@ -266,7 +263,6 @@ const Home = () => {
                 </>
 
                 <button
-                  // disabled={isDisabled}
                   onClick={handleSubmit}
                   type="submit"
                 >
@@ -278,7 +274,7 @@ const Home = () => {
         )}
         {showLogin && (
           <>
-            <section className="login">
+            <section data-testid='login-form' className="login">
               <div className="login-close">
                 <span onClick={closeSignin} className="close-btn">
                   X
@@ -322,7 +318,6 @@ const Home = () => {
                 </>
 
                 <button
-                  // disabled={isDisabled}
                   onClick={handleSubmit}
                   type="submit"
                 >

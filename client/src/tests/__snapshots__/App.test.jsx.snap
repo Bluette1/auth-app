@@ -1,0 +1,172 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > should render the App 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+        data-testid="app"
+      >
+        <div>
+          <article
+            class="img-logo"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="/src/assets/logo.png"
+            />
+          </article>
+           
+          <section
+            class="logo-area"
+          >
+            <h1>
+              Secure your profile
+            </h1>
+          </section>
+          <main>
+            <article
+              class=""
+            >
+              <button
+                class="register-btn"
+              >
+                Register
+              </button>
+              <button
+                class="login-btn"
+              >
+                Login
+              </button>
+            </article>
+          </main>
+          <footer>
+            <p
+              class="attribution"
+            >
+              Design by
+               
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                target="_blank"
+              >
+                Top Weaver
+              </a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+      data-testid="app"
+    >
+      <div>
+        <article
+          class="img-logo"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="/src/assets/logo.png"
+          />
+        </article>
+         
+        <section
+          class="logo-area"
+        >
+          <h1>
+            Secure your profile
+          </h1>
+        </section>
+        <main>
+          <article
+            class=""
+          >
+            <button
+              class="register-btn"
+            >
+              Register
+            </button>
+            <button
+              class="login-btn"
+            >
+              Login
+            </button>
+          </article>
+        </main>
+        <footer>
+          <p
+            class="attribution"
+          >
+            Design by
+             
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              target="_blank"
+            >
+              Top Weaver
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

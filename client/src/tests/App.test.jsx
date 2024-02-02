@@ -16,7 +16,8 @@ const AppWithStore = () => (
 
 describe("App", () => {
   it("should render the App", () => {
-    render(<AppWithStore />);
+    const app = render(<AppWithStore />);
+    expect(app).toMatchSnapshot();
 
     const element = screen.getByText(/secure your profile/i);
     expect(element).toBeInTheDocument();
