@@ -43,6 +43,17 @@ Content-Type: application/json
     "username":"ibes"  
 }
 
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joyous@gmail.com",
+    "password": "fgrt",
+    "username":"jerkass"  
+}
+
+
 
 ###
 POST  http://localhost:3001/login
