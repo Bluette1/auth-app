@@ -38,11 +38,72 @@ exports[`App > should render the App 1`] = `
               </button>
               <button
                 class="login-btn"
+                data-testid="login-btn"
               >
                 Login
               </button>
             </article>
           </main>
+          <section
+            class="hide login"
+            data-testid="login-form"
+          >
+            <div
+              class="login-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Login
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
           <footer>
             <p
               class="attribution"
@@ -95,11 +156,72 @@ exports[`App > should render the App 1`] = `
             </button>
             <button
               class="login-btn"
+              data-testid="login-btn"
             >
               Login
             </button>
           </article>
         </main>
+        <section
+          class="hide login"
+          data-testid="login-form"
+        >
+          <div
+            class="login-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Login
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
         <footer>
           <p
             class="attribution"

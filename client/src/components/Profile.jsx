@@ -21,7 +21,7 @@ const Profile = () => {
 
   return (
     <>
-      <div>
+      <div data-testid="profile">
         <article className="img-logo">
           <img className="logo" src={logo} alt="logo" />
         </article>{" "}

@@ -73,6 +73,7 @@ const Home = () => {
             });
 
             const { user, token } = await response.json();
+
             user.token = token;
             localStorage.setItem("user", JSON.stringify(user));
             dispatch(login(user));
@@ -106,6 +107,8 @@ const Home = () => {
   };
 
   const signin = () => {
+    setShowLogin(true);
+
     const bodyEl = document.querySelector("body");
     const registerBtn = document.querySelector(".register-btn");
     const loginBtn = document.querySelector(".login-btn");
@@ -117,8 +120,6 @@ const Home = () => {
     loginBtn.classList.add("hide");
 
     attribution.classList.add("hide");
-
-    setShowLogin(true);
   };
 
   const closeSignUp = () => {
@@ -192,7 +193,11 @@ const Home = () => {
                 Register
               </button>
 
-              <button className="login-btn" onClick={signin}>
+              <button
+                data-testid="login-btn"
+                className="login-btn"
+                onClick={signin}
+              >
                 Login
               </button>
             </article>
@@ -261,71 +266,69 @@ const Home = () => {
                   </label>
                 </>
 
-                <button
-                  onClick={handleSubmit}
-                  type="submit"
-                >
+                <button onClick={handleSubmit} type="submit">
                   Submit
                 </button>
               </form>
             </section>
           </>
         )}
-        {showLogin && (
-          <>
-            <section data-testid='login-form' className="login">
-              <div className="login-close">
-                <span onClick={closeSignin} className="close-btn">
-                  X
-                </span>
-              </div>
-              <h3>Login</h3>
-              <form action="">
-                <>
-                  <label htmlFor="email">
-                    <p>Email:</p>
-                    <input
-                      className={classNames(
-                        errors.email ? "errors-border" : "",
-                        ""
-                      )}
-                      required
-                      onChange={onChangeEmail}
-                      type="email"
-                      name="email"
-                      id=""
-                    />
-                    <p className="text-rose">{errors.email}</p>
-                  </label>
-                </>
-                <>
-                  <label htmlFor="password">
-                    <p>Password:</p>
-                    <input
-                      className={classNames(
-                        errors.password ? "errors-border" : "",
-                        ""
-                      )}
-                      required
-                      onChange={onChangePassword}
-                      type="password"
-                      name="password"
-                      id=""
-                    />
-                    <p className="text-rose">{errors.password}</p>
-                  </label>
-                </>
+        {/* {showLogin && ( */}
+        <>
+          {/* <section data-testid='login-form' className="login"> */}
 
-                <button
-                  onClick={handleSubmit}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            </section>
-          </>
-        )}
+          <section
+            data-testid="login-form"
+            className={classNames(showLogin ? "" : "hide", "login")}
+          >
+            <div className="login-close">
+              <span onClick={closeSignin} className="close-btn">
+                X
+              </span>
+            </div>
+            <h3>Login</h3>
+            <form action="">
+              <>
+                <label htmlFor="email">
+                  <p>Email:</p>
+                  <input
+                    className={classNames(
+                      errors.email ? "errors-border" : "",
+                      ""
+                    )}
+                    required
+                    onChange={onChangeEmail}
+                    type="email"
+                    name="email"
+                    id=""
+                  />
+                  <p className="text-rose">{errors.email}</p>
+                </label>
+              </>
+              <>
+                <label htmlFor="password">
+                  <p>Password:</p>
+                  <input
+                    className={classNames(
+                      errors.password ? "errors-border" : "",
+                      ""
+                    )}
+                    required
+                    onChange={onChangePassword}
+                    type="password"
+                    name="password"
+                    id=""
+                  />
+                  <p className="text-rose">{errors.password}</p>
+                </label>
+              </>
+
+              <button onClick={handleSubmit} type="submit">
+                Submit
+              </button>
+            </form>
+          </section>
+        </>
         <footer>
           <p className="attribution">
             Design by{" "}
