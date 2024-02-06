@@ -30,7 +30,7 @@ const Profile = () => {
         </section>
         <main>
           <>
-            <article className="">
+            <article>
               <section className="logged-in">                <>
                   <MarkIcon />
                   {user && (
@@ -39,7 +39,7 @@ const Profile = () => {
                 </>
               </section>
 
-              <button className="register-btn" onClick={signOut}>
+              <button className="logout-btn" onClick={signOut}>
                 Logout
               </button>
             </article>

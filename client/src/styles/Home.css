@@ -36,7 +36,7 @@ input {
   padding: 3%;
 }
 
-.signup button, .login button, .logged-in button {
+.signup button, .login button, .logout-btn {
   margin-top: 3rem;
 }
 
