@@ -31,9 +31,7 @@ const Profile = () => {
         <main>
           <>
             <article className="">
-              <section className="logged-in">
-                {" "}
-                <>
+              <section className="logged-in">                <>
                   <MarkIcon />
                   {user && (
                     <h4 className="welcome">{`Welcome, ${user.username}!`}</h4>

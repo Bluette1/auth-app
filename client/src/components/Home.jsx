@@ -167,7 +167,6 @@ const Home = () => {
   };
 
   const handleSubmit = async (evt) => {
-    console.log("here");
     evt.persist();
     evt.preventDefault();
 
