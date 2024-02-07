@@ -48,12 +48,21 @@ POST  http://localhost:3001/users
 Content-Type: application/json
 
 {
-    "email":"joyous@gmail.com",
+    "email":"joyousfull@gmail.com",
     "password": "fgrt",
     "username":"jerkass"  
 }
 
+###
 
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joyousfull@gmail.com",
+    "password": "Passerby1&",
+    "username":"joyousfull"  
+}
 
 ###
 POST  http://localhost:3001/login

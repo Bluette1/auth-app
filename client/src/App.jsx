@@ -1,14 +1,14 @@
-import { Routes, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
-import Home from "./components/Home";
-import Profile from "./components/Profile";
-import "./styles/App.css";
+import { Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Home from './components/Home';
+import Profile from './components/Profile';
+import './styles/App.css';
 
 function App() {
   const { loggedIn } = useSelector((state) => state.auth);
 
   return (
-    <div data-testid='app' className="App">
+    <div data-testid="app" className="App">
       <Routes>
         <Route element={loggedIn ? <Profile /> : <Home />} path="/" />
         <Route

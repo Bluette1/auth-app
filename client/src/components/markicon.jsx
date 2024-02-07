@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 const MarkIcon = (props) => (
   <svg
     width={150}

@@ -1,6 +1,6 @@
-import { LOGIN, LOGOUT } from "../actions/types";
+import { LOGIN, LOGOUT } from '../actions/types';
 
-const user = JSON.parse(localStorage.getItem("user"));
+const user = JSON.parse(localStorage.getItem('user'));
 
 const initialState = user
   ? { loggedIn: true, user }

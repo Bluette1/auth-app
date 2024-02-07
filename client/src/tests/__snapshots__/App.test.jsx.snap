@@ -33,6 +33,7 @@ exports[`App > should render the App 1`] = `
             >
               <button
                 class="register-btn"
+                data-testid="register-btn"
               >
                 Register
               </button>
@@ -44,6 +45,83 @@ exports[`App > should render the App 1`] = `
               </button>
             </article>
           </main>
+          <section
+            class="hide signup"
+            data-testid="register-form"
+          >
+            <div
+              class="signup-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Register
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="username"
+              >
+                <p>
+                   Username:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="username"
+                  required=""
+                  type="text"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
           <section
             class="hide login"
             data-testid="login-form"
@@ -112,6 +190,7 @@ exports[`App > should render the App 1`] = `
                
               <a
                 href="https://portfolio-ms-app.onrender.com/"
+                rel="noreferrer"
                 target="_blank"
               >
                 Top Weaver
@@ -151,6 +230,7 @@ exports[`App > should render the App 1`] = `
           >
             <button
               class="register-btn"
+              data-testid="register-btn"
             >
               Register
             </button>
@@ -162,6 +242,83 @@ exports[`App > should render the App 1`] = `
             </button>
           </article>
         </main>
+        <section
+          class="hide signup"
+          data-testid="register-form"
+        >
+          <div
+            class="signup-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Register
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="username"
+            >
+              <p>
+                 Username:
+              </p>
+              <input
+                class=""
+                id=""
+                name="username"
+                required=""
+                type="text"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
         <section
           class="hide login"
           data-testid="login-form"
@@ -230,6 +387,7 @@ exports[`App > should render the App 1`] = `
              
             <a
               href="https://portfolio-ms-app.onrender.com/"
+              rel="noreferrer"
               target="_blank"
             >
               Top Weaver

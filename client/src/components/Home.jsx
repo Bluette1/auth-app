@@ -1,16 +1,17 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import logo from "../assets/logo.png";
-import "../styles/Home.css";
-import validator from "validator";
-import { login } from "../actions/auth";
-import { useNavigate } from "react-router-dom";
-import { httpProtocol, host, port } from "../env.variables";
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import logo from '../assets/logo.png';
+import '../styles/Home.css';
+import validator from 'validator';
+import { login } from '../actions/auth';
+import { useNavigate } from 'react-router-dom';
+import { httpProtocol, host, port } from '../env.variables';
+import { useEffect } from 'react';
 
 const BASE_URL = `${httpProtocol}://${host}:${port}`;
 
 const classNames = (...classes) => {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 };
 
 const Home = () => {
@@ -19,11 +20,11 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   const dispatch = useDispatch();
 
@@ -39,14 +40,18 @@ const Home = () => {
     setPassword(value);
   };
 
+  useEffect(() => {
+    submitInfo();
+  }, [errors]);
+
   const submitInfo = () => {
     if (Object.entries(errors).length === 0) {
       if (showSignUp) {
         const createUser = async () => {
           await fetch(`${BASE_URL}/users`, {
-            method: "POST",
+            method: 'POST',
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify({
               email,
@@ -54,7 +59,7 @@ const Home = () => {
               password,
             }),
           });
-          setMessage("You have successfully registered.");
+          setMessage('You have successfully registered.');
           setShowSignUp(false);
         };
         createUser();
@@ -62,9 +67,9 @@ const Home = () => {
         const loginUser = async () => {
           try {
             const response = await fetch(`${BASE_URL}/login`, {
-              method: "POST",
+              method: 'POST',
               headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
               },
               body: JSON.stringify({
                 email,
@@ -75,12 +80,12 @@ const Home = () => {
             const { user, token } = await response.json();
 
             user.token = token;
-            localStorage.setItem("user", JSON.stringify(user));
+            localStorage.setItem('user', JSON.stringify(user));
             dispatch(login(user));
 
-            setMessage("You have successfully logged in.");
+            setMessage('You have successfully logged in.');
             setShowLogin(false);
-            navigate("/profile");
+            navigate('/profile');
           } catch (error) {
             console.log(error);
             setMessage(error.message);
@@ -92,16 +97,16 @@ const Home = () => {
   };
 
   const register = () => {
-    const bodyEl = document.querySelector("body");
-    const registerBtn = document.querySelector(".register-btn");
-    const attribution = document.querySelector(".attribution");
-    const loginBtn = document.querySelector(".login-btn");
+    const bodyEl = document.querySelector('body');
+    const registerBtn = document.querySelector('.register-btn');
+    const attribution = document.querySelector('.attribution');
+    const loginBtn = document.querySelector('.login-btn');
 
-    bodyEl.classList.add("absolute-bg");
-    registerBtn.classList.add("hide");
-    loginBtn.classList.add("hide");
+    bodyEl.classList.add('absolute-bg');
+    registerBtn.classList.add('hide');
+    loginBtn.classList.add('hide');
 
-    attribution.classList.add("hide");
+    attribution.classList.add('hide');
 
     setShowSignUp(true);
   };
@@ -109,60 +114,60 @@ const Home = () => {
   const signin = () => {
     setShowLogin(true);
 
-    const bodyEl = document.querySelector("body");
-    const registerBtn = document.querySelector(".register-btn");
-    const loginBtn = document.querySelector(".login-btn");
+    const bodyEl = document.querySelector('body');
+    const registerBtn = document.querySelector('.register-btn');
+    const loginBtn = document.querySelector('.login-btn');
 
-    const attribution = document.querySelector(".attribution");
+    const attribution = document.querySelector('.attribution');
 
-    bodyEl.classList.add("absolute-bg");
-    registerBtn.classList.add("hide");
-    loginBtn.classList.add("hide");
+    bodyEl.classList.add('absolute-bg');
+    registerBtn.classList.add('hide');
+    loginBtn.classList.add('hide');
 
-    attribution.classList.add("hide");
+    attribution.classList.add('hide');
   };
 
   const closeSignUp = () => {
-    const bodyEl = document.querySelector("body");
+    const bodyEl = document.querySelector('body');
 
-    const registerBtn = document.querySelector(".register-btn");
-    const attribution = document.querySelector(".attribution");
-    const loginBtn = document.querySelector(".login-btn");
+    const registerBtn = document.querySelector('.register-btn');
+    const attribution = document.querySelector('.attribution');
+    const loginBtn = document.querySelector('.login-btn');
 
-    registerBtn.classList.remove("hide");
-    attribution.classList.remove("hide");
-    bodyEl.classList.remove("absolute-bg");
-    loginBtn.classList.remove("hide");
+    registerBtn.classList.remove('hide');
+    attribution.classList.remove('hide');
+    bodyEl.classList.remove('absolute-bg');
+    loginBtn.classList.remove('hide');
 
     setShowSignUp(false);
   };
 
   const closeSignin = () => {
-    const bodyEl = document.querySelector("body");
+    const bodyEl = document.querySelector('body');
 
-    const registerBtn = document.querySelector(".register-btn");
-    const attribution = document.querySelector(".attribution");
-    const loginBtn = document.querySelector(".login-btn");
+    const registerBtn = document.querySelector('.register-btn');
+    const attribution = document.querySelector('.attribution');
+    const loginBtn = document.querySelector('.login-btn');
 
-    registerBtn.classList.remove("hide");
-    attribution.classList.remove("hide");
-    bodyEl.classList.remove("absolute-bg");
-    loginBtn.classList.remove("hide");
+    registerBtn.classList.remove('hide');
+    attribution.classList.remove('hide');
+    bodyEl.classList.remove('absolute-bg');
+    loginBtn.classList.remove('hide');
 
     setShowLogin(false);
   };
 
   const checkValidation = async () => {
     const errors = {};
-    if (username.length < 6) {
-      errors.username = "Username must be at least 6 characters.";
+    if (showSignUp && username.length < 6) {
+      errors.username = 'Username must be at least 6 characters.';
     }
     if (!validator.isEmail(email)) {
-      errors.email = "Please enter a valid email.";
+      errors.email = 'Please enter a valid email.';
     }
     if (!validator.isStrongPassword(password)) {
       errors.password =
-        "Password must be at least 8 characters, and contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and atleast one special character(e.g. @$!%*#)";
+        'Password must be at least 8 characters, and contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and atleast one special character(e.g. @$!%*#)';
     }
     setErrors(errors);
   };
@@ -172,7 +177,6 @@ const Home = () => {
     evt.preventDefault();
 
     await checkValidation();
-    await submitInfo();
   };
 
   return (
@@ -180,7 +184,7 @@ const Home = () => {
       <div>
         <article className="img-logo">
           <img className="logo" src={logo} alt="logo" />
-        </article>{" "}
+        </article>{' '}
         <section className="logo-area">
           <h1>Secure your profile</h1>
         </section>
@@ -189,7 +193,11 @@ const Home = () => {
             <article className="">
               {message && <p>{message}</p>}
 
-              <button className="register-btn" onClick={register}>
+              <button
+                data-testid="register-btn"
+                className="register-btn"
+                onClick={register}
+              >
                 Register
               </button>
 
@@ -203,98 +211,45 @@ const Home = () => {
             </article>
           </>
         </main>
-        {showSignUp && (
-          <>
-            <section className="signup">
-              <div className="signup-close">
-                <span onClick={closeSignUp} className="close-btn">
-                  X
-                </span>
-              </div>
-              <h3>Register</h3>
-              <form action="">
-                <>
-                  <label htmlFor="username">
-                    <p> Username:</p>
-
-                    <input
-                      className={classNames(
-                        errors.username ? "errors-border" : "",
-                        ""
-                      )}
-                      required
-                      onChange={onChangeUsername}
-                      type="text"
-                      name="username"
-                      id=""
-                    />
-                    <p className="text-rose">{errors.username}</p>
-                  </label>
-                </>
-                <>
-                  <label htmlFor="email">
-                    <p>Email:</p>
-                    <input
-                      className={classNames(
-                        errors.email ? "errors-border" : "",
-                        ""
-                      )}
-                      required
-                      onChange={onChangeEmail}
-                      type="email"
-                      name="email"
-                      id=""
-                    />
-                    <p className="text-rose">{errors.email}</p>
-                  </label>
-                </>
-                <>
-                  <label htmlFor="password">
-                    <p>Password:</p>
-                    <input
-                      className={classNames(
-                        errors.password ? "errors-border" : "",
-                        ""
-                      )}
-                      required
-                      onChange={onChangePassword}
-                      type="password"
-                      name="password"
-                      id=""
-                    />
-                    <p className="text-rose">{errors.password}</p>
-                  </label>
-                </>
-
-                <button onClick={handleSubmit} type="submit">
-                  Submit
-                </button>
-              </form>
-            </section>
-          </>
-        )}
-        {/* {showLogin && ( */}
+        {/* {showSignUp && ( */}
         <>
-          {/* <section data-testid='login-form' className="login"> */}
-
+          {/* <section className="signup"> */}
           <section
-            data-testid="login-form"
-            className={classNames(showLogin ? "" : "hide", "login")}
+            data-testid="register-form"
+            className={classNames(showSignUp ? '' : 'hide', 'signup')}
           >
-            <div className="login-close">
-              <span onClick={closeSignin} className="close-btn">
+            <div className="signup-close">
+              <span onClick={closeSignUp} className="close-btn">
                 X
               </span>
             </div>
-            <h3>Login</h3>
+            <h3>Register</h3>
             <form action="">
+              <>
+                <label htmlFor="username">
+                  <p> Username:</p>
+
+                  <input
+                    className={classNames(
+                      errors.username ? 'errors-border' : '',
+                      ''
+                    )}
+                    required
+                    onChange={onChangeUsername}
+                    type="text"
+                    name="username"
+                    id=""
+                  />
+                  <p className="text-rose">{errors.username}</p>
+                </label>
+              </>
               <>
                 <label htmlFor="email">
                   <p>Email:</p>
                   <input
                     className={classNames(
-                      errors.email ? "errors-border" : "",
-                      ""
+                      errors.email ? 'errors-border' : '',
+                      ''
                     )}
                     required
                     onChange={onChangeEmail}
@@ -310,8 +265,62 @@ const Home = () => {
                   <p>Password:</p>
                   <input
                     className={classNames(
-                      errors.password ? "errors-border" : "",
-                      ""
+                      errors.password ? 'errors-border' : '',
+                      ''
+                    )}
+                    required
+                    onChange={onChangePassword}
+                    type="password"
+                    name="password"
+                    id=""
+                  />
+                  <p className="text-rose">{errors.password}</p>
+                </label>
+              </>
+
+              <button onClick={handleSubmit} type="submit">
+                Submit
+              </button>
+            </form>
+          </section>
+        </>
+        {/* )} */}
+        <>
+          <section
+            data-testid="login-form"
+            className={classNames(showLogin ? '' : 'hide', 'login')}
+          >
+            <div className="login-close">
+              <span onClick={closeSignin} className="close-btn">
+                X
+              </span>
+            </div>
+            <h3>Login</h3>
+            <form action="">
+              <>
+                <label htmlFor="email">
+                  <p>Email:</p>
+                  <input
+                    className={classNames(
+                      errors.email ? 'errors-border' : '',
+                      ''
+                    )}
+                    required
+                    onChange={onChangeEmail}
+                    type="email"
+                    name="email"
+                    id=""
+                  />
+                  <p className="text-rose">{errors.email}</p>
+                </label>
+              </>
+              <>
+                <label htmlFor="password">
+                  <p>Password:</p>
+                  <input
+                    className={classNames(
+                      errors.password ? 'errors-border' : '',
+                      ''
                     )}
                     required
                     onChange={onChangePassword}
@@ -331,8 +340,12 @@ const Home = () => {
         </>
         <footer>
           <p className="attribution">
-            Design by{" "}
-            <a href="https://portfolio-ms-app.onrender.com/" target="_blank">
+            Design by{' '}
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Top Weaver
             </a>
           </p>

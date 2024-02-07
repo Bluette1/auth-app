@@ -1,10 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
-import { logout } from "../actions/auth";
-import logo from "../assets/logo.png";
-import "../styles/Profile.css";
-import MarkIcon from "./markicon";
+import { logout } from '../actions/auth';
+import logo from '../assets/logo.png';
+import '../styles/Profile.css';
+import MarkIcon from './markicon';
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const Profile = () => {
   const signOut = () => {
     localStorage.clear();
     dispatch(logout());
-    navigate("/");
+    navigate('/');
   };
 
   return (
@@ -24,14 +24,15 @@ const Profile = () => {
       <div data-testid="profile">
         <article className="img-logo">
           <img className="logo" src={logo} alt="logo" />
-        </article>{" "}
+        </article>{' '}
         <section className="logo-area">
           <h1>Secure profile</h1>
         </section>
         <main>
           <>
             <article>
-              <section className="logged-in">                <>
+              <section className="logged-in">
+                <>
                   <MarkIcon />
                   {user && (
                     <h4 className="welcome">{`Welcome, ${user.username}!`}</h4>
@@ -39,7 +40,11 @@ const Profile = () => {
                 </>
               </section>
 
-              <button className="logout-btn" onClick={signOut}>
+              <button
+                data-testid="logout-btn"
+                className="logout-btn"
+                onClick={signOut}
+              >
                 Logout
               </button>
             </article>
@@ -47,8 +52,12 @@ const Profile = () => {
         </main>
         <footer>
           <p className="attribution">
-            Design by{" "}
-            <a href="https://portfolio-ms-app.onrender.com/" target="_blank">
+            Design by{' '}
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Top Weaver
             </a>
           </p>
