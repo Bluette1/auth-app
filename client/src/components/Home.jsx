@@ -47,22 +47,36 @@ const Home = () => {
   const submitInfo = () => {
     if (Object.entries(errors).length === 0) {
       if (showSignUp) {
-        const createUser = async () => {
-          await fetch(`${BASE_URL}/users`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              email,
-              username,
-              password,
-            }),
-          });
-          setMessage('You have successfully registered.');
-          setShowSignUp(false);
-        };
-        createUser();
+        try {
+          const createUser = async () => {  
+            const response = await fetch(`${BASE_URL}/users`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email,
+                username,
+                password,
+              }),
+            });
+
+            if (!response.ok) {
+              setMessage('Sorry an error occurred. Try again.');
+              return;
+            }
+
+            const res = await response.json();
+
+            setMessage('You have successfully registered.');
+            setShowSignUp(false);
+          };
+
+          createUser();
+        } catch (error) {
+          console.log(error);
+          return;
+        }
       } else if (showLogin) {
         const loginUser = async () => {
           try {
@@ -76,6 +90,11 @@ const Home = () => {
                 password,
               }),
             });
+
+            if (!response.ok) {
+              setMessage('Sorry an error occurred. Try again.');
+              return;
+            }
 
             const { user, token } = await response.json();
 

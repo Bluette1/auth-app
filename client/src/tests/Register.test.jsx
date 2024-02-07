@@ -42,6 +42,57 @@ const AppWithStore = () => (
 );
 
 describe('Authentication - Signup', () => {
+  it.sequential('Response errors are handled correctly', async () => {
+    server.use(
+      http.post('http://localhost:3001/users', () => {
+        return new HttpResponse(null, { status: 400 })
+      })
+    );
+
+    const app = render(<AppWithStore />);
+    expect(app).toMatchSnapshot();
+
+    const registerBtn = screen.getByTestId('register-btn');
+    expect(registerBtn).toBeInTheDocument();
+
+    const registerForm = screen.getByTestId('register-form');
+    expect(registerForm).toHaveClass('hide');
+
+    act(() => {
+      fireEvent.click(registerBtn);
+    });
+
+    expect(registerForm).not.toHaveClass('hide');
+
+    const inputUsername = registerForm.querySelector('input[type="text"]');
+    expect(inputUsername).toBeInTheDocument();
+
+    const inputEmail = registerForm.querySelector('input[type="email"]');
+    expect(inputEmail).toBeInTheDocument();
+
+    const inputPassword = registerForm.querySelector('input[type="password"]');
+    expect(inputPassword).toBeInTheDocument();
+
+    const submitBtn = registerForm.querySelector('button');
+
+    await act(async () => {
+      fireEvent.change(inputUsername, {
+        target: { value: 'dogggy@gmail.com' },
+      });
+      fireEvent.change(inputEmail, { target: { value: 'doggy@gmail.com' } });
+      fireEvent.change(inputPassword, {
+        target: { value: 'passwordGoodOne123&' },
+      });
+      await fireEvent.click(submitBtn);
+    });
+
+    await waitFor(() => {
+      expect(screen.getByText(/Sorry an error occurred./i)).toBeInTheDocument();
+      expect(registerForm).not.toHaveClass('hide');
+      expect(app).toMatchSnapshot();
+    });
+  });
+
   it.sequential('Form Validation works as expected', async () => {
     const app = render(<AppWithStore />);
     const registerBtn = screen.getByTestId('register-btn');
@@ -63,12 +114,10 @@ describe('Authentication - Signup', () => {
 
     const inputPassword = registerForm.querySelector('input[type="password"]');
     expect(inputPassword).toBeInTheDocument();
-
     const submitBtn = registerForm.querySelector('button');
 
     await act(async () => {
       fireEvent.change(inputUsername, { target: { value: 'doggy' } });
-
       fireEvent.change(inputEmail, { target: { value: 'gmail.com' } });
       fireEvent.change(inputPassword, {
         target: { value: '123&' },
@@ -130,7 +179,6 @@ describe('Authentication - Signup', () => {
       fireEvent.change(inputUsername, {
         target: { value: 'dogggy@gmail.com' },
       });
-
       fireEvent.change(inputEmail, { target: { value: 'doggy@gmail.com' } });
       fireEvent.change(inputPassword, {
         target: { value: 'passwordGoodOne123&' },
@@ -143,7 +191,6 @@ describe('Authentication - Signup', () => {
         screen.getByText('You have successfully registered.')
       ).toBeInTheDocument();
       expect(registerForm).toHaveClass('hide');
-
       expect(app).toMatchSnapshot();
     });
   });

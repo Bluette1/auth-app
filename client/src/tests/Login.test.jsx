@@ -44,6 +44,49 @@ const AppWithStore = () => (
 );
 
 describe('Authentication - Login', () => {
+  it.sequential('Response errors are handled correctly', async () => {
+    server.use(
+      http.post('http://localhost:3001/login', () => {
+        return new HttpResponse(null, { status: 401 });
+      })
+    );
+    const app = render(<AppWithStore />);
+    expect(app).toMatchSnapshot();
+
+    const loginBtn = screen.getByTestId('login-btn');
+    expect(loginBtn).toBeInTheDocument();
+
+    const loginForm = screen.getByTestId('login-form');
+    expect(loginForm).toHaveClass('hide');
+
+    act(() => {
+      fireEvent.click(loginBtn);
+    });
+
+    expect(loginForm).not.toHaveClass('hide');
+    const inputEmail = loginForm.querySelector('input[type="email"]');
+    expect(inputEmail).toBeInTheDocument();
+
+    const inputPassword = loginForm.querySelector('input[type="password"]');
+    expect(inputPassword).toBeInTheDocument();
+
+    const submitBtn = loginForm.querySelector('button');
+    const loginDispatchSpy = store.dispatch;
+
+    await act(async () => {
+      fireEvent.change(inputEmail, { target: { value: 'doggy@gmail.com' } });
+      fireEvent.change(inputPassword, {
+        target: { value: 'passwordGoodOne123&' },
+      });
+      await fireEvent.click(submitBtn);
+    });
+
+    await waitFor(async () => {
+      expect(loginDispatchSpy).not.toHaveBeenCalled();
+      expect(loginForm).toBeInTheDocument();
+    });
+  });
+
   it.sequential('Form Validation works as expected', async () => {
     const app = render(<AppWithStore />);
     const loginBtn = screen.getByTestId('login-btn');
