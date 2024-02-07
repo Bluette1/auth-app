@@ -211,9 +211,7 @@ const Home = () => {
             </article>
           </>
         </main>
-        {/* {showSignUp && ( */}
         <>
-          {/* <section className="signup"> */}
           <section
             data-testid="register-form"
             className={classNames(showSignUp ? '' : 'hide', 'signup')}
@@ -284,7 +282,6 @@ const Home = () => {
             </form>
           </section>
         </>
-        {/* )} */}
         <>
           <section
             data-testid="login-form"

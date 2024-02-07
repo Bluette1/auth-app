@@ -13,4 +13,4 @@ jobs:
       - name: Setup Eslint
         run: cd client && yarn
       - name: Eslint Report
-        run: yarn lint
+        run: cd client && yarn lint
