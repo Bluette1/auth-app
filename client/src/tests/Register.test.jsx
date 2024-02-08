@@ -6,14 +6,10 @@ import {
   act,
   fireEvent,
   within,
-} from '@testing-library/react';
+} from '../testutils/test-utils';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import App from '../App.jsx';
-import { BrowserRouter } from 'react-router-dom';
-
-import configureStore from '../testutils/store';
-import { Provider } from 'react-redux';
 import { beforeAll, afterEach, afterAll } from 'vitest';
 
 const user = {
@@ -22,7 +18,7 @@ const user = {
 };
 
 const server = setupServer(
-  http.post('http://localhost:3001/users', (req, params, cookies) => {
+  http.post('http://localhost:3001/users', () => {
     return HttpResponse.json(user);
   })
 );
@@ -30,16 +26,6 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
-
-const store = configureStore();
-
-const AppWithStore = () => (
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
-);
 
 describe('Authentication - Signup', () => {
   it.sequential('Response errors are handled correctly', async () => {
@@ -49,7 +35,7 @@ describe('Authentication - Signup', () => {
       })
     );
 
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     expect(app).toMatchSnapshot();
 
     const registerBtn = screen.getByTestId('register-btn');
@@ -94,7 +80,7 @@ describe('Authentication - Signup', () => {
   });
 
   it.sequential('Form Validation works as expected', async () => {
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     const registerBtn = screen.getByTestId('register-btn');
     expect(registerBtn).toBeInTheDocument();
 
@@ -149,7 +135,7 @@ describe('Authentication - Signup', () => {
   });
 
   it.sequential('A user can sign up', async () => {
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     expect(app).toMatchSnapshot();
 
     const registerBtn = screen.getByTestId('register-btn');

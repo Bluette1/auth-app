@@ -6,14 +6,11 @@ import {
   act,
   fireEvent,
   within,
-} from '@testing-library/react';
+  store,
+} from '../testutils/test-utils';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 import App from '../App.jsx';
-import { BrowserRouter } from 'react-router-dom';
-
-import configureStore from '../testutils/store';
-import { Provider } from 'react-redux';
 import { beforeAll, afterEach, afterAll } from 'vitest';
 
 const user = {
@@ -24,7 +21,7 @@ const user = {
 const token = 'ey1223876655599JNG54667777788777';
 
 const server = setupServer(
-  http.post('http://localhost:3001/login', (req, params, cookies) => {
+  http.post('http://localhost:3001/login', () => {
     return HttpResponse.json({ user, token });
   })
 );
@@ -33,16 +30,6 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-const store = configureStore();
-
-const AppWithStore = () => (
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
-);
-
 describe('Authentication - Login', () => {
   it.sequential('Response errors are handled correctly', async () => {
     server.use(
@@ -50,7 +37,7 @@ describe('Authentication - Login', () => {
         return new HttpResponse(null, { status: 401 });
       })
     );
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     expect(app).toMatchSnapshot();
 
     const loginBtn = screen.getByTestId('login-btn');
@@ -88,7 +75,7 @@ describe('Authentication - Login', () => {
   });
 
   it.sequential('Form Validation works as expected', async () => {
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     const loginBtn = screen.getByTestId('login-btn');
     expect(loginBtn).toBeInTheDocument();
 
@@ -133,7 +120,7 @@ describe('Authentication - Login', () => {
   });
 
   it.sequential('A user can login', async () => {
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     expect(app).toMatchSnapshot();
 
     const loginBtn = screen.getByTestId('login-btn');
@@ -181,7 +168,7 @@ describe('Authentication - Login', () => {
   });
 
   it.sequential('A user can logout', async () => {
-    const app = render(<AppWithStore />);
+    const app = render(<App />);
     expect(app).toMatchSnapshot();
     const profile = screen.getByTestId('profile');
     expect(profile).toBeInTheDocument();
