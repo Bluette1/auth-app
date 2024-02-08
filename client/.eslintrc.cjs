@@ -20,8 +20,9 @@ module.exports = {
     ],
     'no-unused-vars': ['warn'],
     'no-undef': ['warn'],
-    'jsx-quotes': ["error", 'prefer-double'],
-    'quotes': ["error", 'single']
+    'jsx-quotes': ['error', 'prefer-double'],
+    'quotes': ['error', 'single'],
+    'react/prop-types': ['warn']
 
   },
 }
