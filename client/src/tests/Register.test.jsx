@@ -31,7 +31,7 @@ describe('Authentication - Signup', () => {
   it.sequential('Response errors are handled correctly', async () => {
     server.use(
       http.post('http://localhost:3001/users', () => {
-        return new HttpResponse(null, { status: 400 })
+        return new HttpResponse(null, { status: 400 });
       })
     );
 
@@ -79,60 +79,73 @@ describe('Authentication - Signup', () => {
     });
   });
 
-  it.sequential('Form Validation works as expected', async () => {
-    const app = render(<App />);
-    const registerBtn = screen.getByTestId('register-btn');
-    expect(registerBtn).toBeInTheDocument();
+  const invalidScenarios = {
+    text: ['doggy', 'doggy@gmail.com', 'passwordGoodOne123&', 'Username must be at least 6 characters.'],
+    email: ['dogggy', 'gmail.com', 'passwordGoodOne123&', 'Please enter a valid email.'],
+    password: [
+      'dogggy',
+      'doggy@gmail.com',
+      '123&',
+      /Password must be at least 8 characters/i,
+    ],
+  };
 
-    const registerForm = screen.getByTestId('register-form');
-    expect(registerForm).toHaveClass('hide');
-
-    act(() => {
-      fireEvent.click(registerBtn);
-    });
-
-    expect(registerForm).not.toHaveClass('hide');
-
-    const inputUsername = registerForm.querySelector('input[type="text"]');
-    expect(inputUsername).toBeInTheDocument();
-    const inputEmail = registerForm.querySelector('input[type="email"]');
-    expect(inputEmail).toBeInTheDocument();
-
-    const inputPassword = registerForm.querySelector('input[type="password"]');
-    expect(inputPassword).toBeInTheDocument();
-    const submitBtn = registerForm.querySelector('button');
-
-    await act(async () => {
-      fireEvent.change(inputUsername, { target: { value: 'doggy' } });
-      fireEvent.change(inputEmail, { target: { value: 'gmail.com' } });
-      fireEvent.change(inputPassword, {
-        target: { value: '123&' },
-      });
-      await fireEvent.click(submitBtn);
-    });
-
-    await waitFor(() => {
-      expect(inputUsername).toHaveClass('errors-border');
-
-      expect(inputEmail).toHaveClass('errors-border');
-
-      expect(inputPassword).toHaveClass('errors-border');
-      expect(
-        within(registerForm).getByText(
-          'Username must be at least 6 characters.'
-        )
-      ).toBeInTheDocument();
-      expect(
-        within(registerForm).getByText('Please enter a valid email.')
-      ).toBeInTheDocument();
-      expect(
-        within(registerForm).getByText(
-          /Password must be at least 8 characters/i
-        )
-      ).toBeInTheDocument();
+  for (const invalidScenario in invalidScenarios) {
+    it.sequential('Form Validation works as expected', async () => {
+      const app = render(<App />);
       expect(app).toMatchSnapshot();
+
+      const registerBtn = screen.getByTestId('register-btn');
+      expect(registerBtn).toBeInTheDocument();
+  
+      const registerForm = screen.getByTestId('register-form');
+      expect(registerForm).toHaveClass('hide');
+  
+      act(() => {
+        fireEvent.click(registerBtn);
+      });
+
+      const scenario = invalidScenarios[invalidScenario];
+      const username = scenario[0];
+
+      const email = scenario[1];
+      const password = scenario[2];
+      const errorMessage = scenario[3];
+  
+      expect(registerForm).not.toHaveClass('hide');
+  
+      const inputUsername = registerForm.querySelector('input[type="text"]');
+      expect(inputUsername).toBeInTheDocument();
+      const inputEmail = registerForm.querySelector('input[type="email"]');
+      expect(inputEmail).toBeInTheDocument();
+  
+      const inputPassword = registerForm.querySelector('input[type="password"]');
+      expect(inputPassword).toBeInTheDocument();
+      const submitBtn = registerForm.querySelector('button');
+  
+      await act(async () => {
+        fireEvent.change(inputUsername, { target: { value: username } });
+        fireEvent.change(inputEmail, { target: { value: email } });
+        fireEvent.change(inputPassword, {
+          target: { value: [password] },
+        });
+        await fireEvent.click(submitBtn);
+      });
+  
+      await waitFor(() => {
+        expect(
+          registerForm.querySelector(`input[type="${invalidScenario}"]`)
+        ).toHaveClass('errors-border');
+
+        expect(
+          within(registerForm).getByText(
+            errorMessage
+          )
+        ).toBeInTheDocument();
+      });
     });
-  });
+  
+  }
 
   it.sequential('A user can sign up', async () => {
     const app = render(<App />);
