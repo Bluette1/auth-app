@@ -11,6 +11,6 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
       - name: Setup Eslint
-        run: cd client && yarn
+        run: cd api && yarn
       - name: Eslint Report
-        run: cd client && yarn lint
+        run: cd api && yarn lint

@@ -56,7 +56,6 @@ Make sure the server is running
 - You can deploy on
 - [Heroku](https://devcenter.heroku.com/categories/nodejs-support).
 
-
 ## Authors
 
 👤 **Marylene Sawyer**

@@ -16,10 +16,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd client && yarn install
-      - run: cd client && yarn test
+      
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.8.0
+        with:
+          mongodb-version: ${{ matrix.mongodb-version }}
+      - run: cd api && yarn install
+      - run: cd api && yarn test
         env:
-          VITE_REQUEST_OPTIONS_HOST: localhost
-          VITE_REQUEST_OPTIONS_PORT: 3001
-          VITE_REQUEST_OPTIONS_HTTP_PROTOCOL: http
+          MONGO_URI: mongodb://localhost:27017/auth_app_test_db
+          JWT_SECRET: S3CR3T
         

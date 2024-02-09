@@ -12,6 +12,18 @@ Content-Type: application/json
   
 }
 
+
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"km.smith@gmail.com",
+    "username":"Kmia Smith",
+    "password": "password4"
+  
+}
+
 ###
 POST  http://localhost:3001/users
 Content-Type: application/json
