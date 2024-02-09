@@ -1,15 +1,15 @@
-const expect = require('chai').expect
-const request = require('supertest')
-const normalizeEmail = require('normalize-email')
-const app = require('../../app')
-const User = require('../../models/user')
+const expect = require('chai').expect;
+const request = require('supertest');
+const normalizeEmail = require('normalize-email');
+const app = require('../../app');
+const User = require('../../models/user');
 
 describe('POST /users', function () {
   const user = {
     email: 'jomica.smith@gmail.com',
     username: 'Jomica Smith',
     password: 'password4',
-  }
+  };
   it('A user is created successfully', function (done) {
     request(app)
       .post('/users')
@@ -18,13 +18,13 @@ describe('POST /users', function () {
       .expect(201)
       .end((err, res) => {
         if (err) {
-          return done(err)
+          return done(err);
         }
-        expect(res.body.username).to.be.equal(user.username)
-        expect(res.body.email).to.be.equal(normalizeEmail(user.email))
-        return done()
-      })
-  })
+        expect(res.body.username).to.be.equal(user.username);
+        expect(res.body.email).to.be.equal(normalizeEmail(user.email));
+        return done();
+      });
+  });
 
   it("A user's username should be unique ", function (done) {
     request(app)
@@ -38,16 +38,16 @@ describe('POST /users', function () {
       .expect(400)
       .end((err, res) => {
         if (err) {
-          return done(err)
+          return done(err);
         }
         const {
           error: { message },
-        } = res.body
-        expect(message).to.contain('duplicate key')
+        } = res.body;
+        expect(message).to.contain('duplicate key');
 
-        return done()
-      })
-  })
+        return done();
+      });
+  });
 
   it("A user's email should be unique ", function (done) {
     request(app)
@@ -61,16 +61,16 @@ describe('POST /users', function () {
       .expect(400)
       .end((err, res) => {
         if (err) {
-          return done(err)
+          return done(err);
         }
         const {
           error: { message },
-        } = res.body
-        expect(message).to.contain('duplicate key')
+        } = res.body;
+        expect(message).to.contain('duplicate key');
 
-        return done()
-      })
-  })
+        return done();
+      });
+  });
 
   it("A user's username should not contain forbidden words ", function (done) {
     request(app)
@@ -84,19 +84,19 @@ describe('POST /users', function () {
       .expect(400)
       .end((err, res) => {
         if (err) {
-          return done(err)
+          return done(err);
         }
 
-        const { message } = res.body
+        const { message } = res.body;
         expect(message).to.equal(
           'Username validation failed: forbidden word(s)'
-        )
+        );
 
-        return done()
-      })
-  })
+        return done();
+      });
+  });
 
   after(async function () {
-    await User.deleteOne({ username: user.username })
-  })
-})
+    await User.deleteOne({ username: user.username });
+  });
+});

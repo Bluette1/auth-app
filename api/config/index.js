@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const defaultConfig = {
   jwt: {
@@ -11,10 +11,10 @@ const defaultConfig = {
     db: 'auth_app_db',
     uri: process.env.MONGO_URI,
   },
-}
+};
 
-const env = process.env.NODE_ENV || 'development'
+const env = process.env.NODE_ENV || 'development';
 
-const config = require(`./${env}`)
-const resConfig = Object.assign({ env }, defaultConfig, config)
-module.exports = resConfig
+const config = require(`./${env}`);
+const resConfig = Object.assign({ env }, defaultConfig, config);
+module.exports = resConfig;

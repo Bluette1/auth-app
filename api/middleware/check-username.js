@@ -10,29 +10,29 @@ const checkUsername = (username) => {
     'jerk',
     'smart',
     'holy',
-  ]
+  ];
 
-  let permitted = true
+  let permitted = true;
 
   notPermitted.forEach((word) => {
     if (username.indexOf(word) !== -1) {
-      permitted = false
+      permitted = false;
     }
-  })
-  return permitted
-}
+  });
+  return permitted;
+};
 
 const verifyUsername = (req, res, next) => {
-  const username = req.body.username
-  const permitted = checkUsername(username)
+  const username = req.body.username;
+  const permitted = checkUsername(username);
   if (!permitted) {
     return res.status(400).send({
       code: 400,
       message: 'Username validation failed: forbidden word(s)',
-    })
+    });
   }
 
-  next()
-}
+  next();
+};
 
-module.exports = verifyUsername
+module.exports = verifyUsername;

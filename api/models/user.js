@@ -1,10 +1,10 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const checkEmail = (email) => {
   const re =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-  return re.test(email)
-}
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  return re.test(email);
+};
 
 const checkUsername = (username) => {
   const notPermitted = [
@@ -18,17 +18,17 @@ const checkUsername = (username) => {
     'jerk',
     'smart',
     'holy',
-  ]
+  ];
 
-  let permitted = true
+  let permitted = true;
 
   notPermitted.forEach((word) => {
     if (username.indexOf(word) !== -1) {
-      permitted = false
+      permitted = false;
     }
-  })
-  return permitted
-}
+  });
+  return permitted;
+};
 
 const UserSchema = new mongoose.Schema(
   {
@@ -55,7 +55,7 @@ const UserSchema = new mongoose.Schema(
     },
   },
   { timestamps: true }
-)
+);
 
-const User = mongoose.model('User', UserSchema)
-module.exports = User
+const User = mongoose.model('User', UserSchema);
+module.exports = User;

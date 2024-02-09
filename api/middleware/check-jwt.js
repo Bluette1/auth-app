@@ -1,10 +1,10 @@
-const { verify } = require('jsonwebtoken')
-const config = require('../config')
-const { getUser } = require('../state/users')
+const { verify } = require('jsonwebtoken');
+const config = require('../config');
+const { getUser } = require('../state/users');
 
 const checkJwt = async (req, res, next) => {
-  const token = req.headers.authorization
-  let jwtPayload
+  const token = req.headers.authorization;
+  let jwtPayload;
 
   try {
     jwtPayload = await verify(token.split(' ')[1], config.jwt.secret, {
@@ -13,15 +13,15 @@ const checkJwt = async (req, res, next) => {
       clockTolerance: 0,
       ignoreExpiration: false,
       ignoreNotBefore: false,
-    })
-    const user = getUser(jwtPayload.payload.userId)
-    req.user = user
+    });
+    const user = getUser(jwtPayload.payload.userId);
+    req.user = user;
   } catch (error) {
     return res
       .status(403)
-      .send({ code: 403, message: 'Missing or invalid token' })
+      .send({ code: 403, message: 'Missing or invalid token' });
   }
-  next()
-}
+  next();
+};
 
-module.exports = checkJwt
+module.exports = checkJwt;
