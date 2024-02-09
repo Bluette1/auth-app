@@ -1,5 +1,4 @@
----
-name: Linters
+name: Linters Api
 on: pull_request
 env:
   FORCE_COLOR: 1
