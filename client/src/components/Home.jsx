@@ -17,6 +17,7 @@ const classNames = (...classes) => {
 const Home = () => {
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   const navigate = useNavigate();
 
@@ -48,7 +49,7 @@ const Home = () => {
     if (Object.entries(errors).length === 0) {
       if (showSignUp) {
         try {
-          const createUser = async () => {  
+          const createUser = async () => {
             const response = await fetch(`${BASE_URL}/users`, {
               method: 'POST',
               headers: {
@@ -69,6 +70,11 @@ const Home = () => {
             const res = await response.json();
 
             setMessage('You have successfully registered.');
+            const bodyEl = document.querySelector('body');
+
+            bodyEl.classList.remove('absolute-bg');
+            setIsHidden(false);
+
             setShowSignUp(false);
           };
 
@@ -117,15 +123,9 @@ const Home = () => {
 
   const register = () => {
     const bodyEl = document.querySelector('body');
-    const registerBtn = document.querySelector('.register-btn');
-    const attribution = document.querySelector('.attribution');
-    const loginBtn = document.querySelector('.login-btn');
 
     bodyEl.classList.add('absolute-bg');
-    registerBtn.classList.add('hide');
-    loginBtn.classList.add('hide');
-
-    attribution.classList.add('hide');
+    setIsHidden(true);
 
     setShowSignUp(true);
   };
@@ -134,29 +134,16 @@ const Home = () => {
     setShowLogin(true);
 
     const bodyEl = document.querySelector('body');
-    const registerBtn = document.querySelector('.register-btn');
-    const loginBtn = document.querySelector('.login-btn');
-
-    const attribution = document.querySelector('.attribution');
 
     bodyEl.classList.add('absolute-bg');
-    registerBtn.classList.add('hide');
-    loginBtn.classList.add('hide');
-
-    attribution.classList.add('hide');
+    setIsHidden(true);
   };
 
   const closeSignUp = () => {
     const bodyEl = document.querySelector('body');
 
-    const registerBtn = document.querySelector('.register-btn');
-    const attribution = document.querySelector('.attribution');
-    const loginBtn = document.querySelector('.login-btn');
-
-    registerBtn.classList.remove('hide');
-    attribution.classList.remove('hide');
     bodyEl.classList.remove('absolute-bg');
-    loginBtn.classList.remove('hide');
+    setIsHidden(false);
 
     setShowSignUp(false);
   };
@@ -164,14 +151,8 @@ const Home = () => {
   const closeSignin = () => {
     const bodyEl = document.querySelector('body');
 
-    const registerBtn = document.querySelector('.register-btn');
-    const attribution = document.querySelector('.attribution');
-    const loginBtn = document.querySelector('.login-btn');
-
-    registerBtn.classList.remove('hide');
-    attribution.classList.remove('hide');
     bodyEl.classList.remove('absolute-bg');
-    loginBtn.classList.remove('hide');
+    setIsHidden(false);
 
     setShowLogin(false);
   };
@@ -212,21 +193,25 @@ const Home = () => {
             <article className="">
               {message && <p>{message}</p>}
 
-              <button
-                data-testid="register-btn"
-                className="register-btn"
-                onClick={register}
-              >
-                Register
-              </button>
+              {!isHidden && (
+                <button
+                  data-testid="register-btn"
+                  className="register-btn"
+                  onClick={register}
+                >
+                  Register
+                </button>
+              )}
 
-              <button
-                data-testid="login-btn"
-                className="login-btn"
-                onClick={signin}
-              >
-                Login
-              </button>
+              {!isHidden && (
+                <button
+                  data-testid="login-btn"
+                  className="login-btn"
+                  onClick={signin}
+                >
+                  Login
+                </button>
+              )}
             </article>
           </>
         </main>
@@ -355,16 +340,18 @@ const Home = () => {
           </section>
         </>
         <footer>
-          <p className="attribution">
-            Design by{' '}
-            <a
-              href="https://portfolio-ms-app.onrender.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Top Weaver
-            </a>
-          </p>
+          {!isHidden && (
+            <p className="attribution">
+              Design by{' '}
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Top Weaver
+              </a>
+            </p>
+          )}
         </footer>
       </div>
     </>
