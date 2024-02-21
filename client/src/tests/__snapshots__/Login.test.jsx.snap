@@ -1,0 +1,2064 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Authentication - Login > A user can login 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    class="absolute-bg"
+  >
+    <div>
+      <div
+        class="App"
+        data-testid="app"
+      >
+        <div>
+          <article
+            class="img-logo"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="/src/assets/logo.png"
+            />
+          </article>
+           
+          <section
+            class="logo-area"
+          >
+            <h1>
+              Secure your profile
+            </h1>
+          </section>
+          <main>
+            <article
+              class=""
+            >
+              <button
+                class="register-btn"
+                data-testid="register-btn"
+              >
+                Register
+              </button>
+              <button
+                class="login-btn"
+                data-testid="login-btn"
+              >
+                Login
+              </button>
+            </article>
+          </main>
+          <section
+            class="hide signup"
+            data-testid="register-form"
+          >
+            <div
+              class="signup-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Register
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="username"
+              >
+                <p>
+                   Username:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="username"
+                  required=""
+                  type="text"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <section
+            class="hide login"
+            data-testid="login-form"
+          >
+            <div
+              class="login-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Login
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <footer>
+            <p
+              class="attribution"
+            >
+              Design by
+               
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Top Weaver
+              </a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+      data-testid="app"
+    >
+      <div>
+        <article
+          class="img-logo"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="/src/assets/logo.png"
+          />
+        </article>
+         
+        <section
+          class="logo-area"
+        >
+          <h1>
+            Secure your profile
+          </h1>
+        </section>
+        <main>
+          <article
+            class=""
+          >
+            <button
+              class="register-btn"
+              data-testid="register-btn"
+            >
+              Register
+            </button>
+            <button
+              class="login-btn"
+              data-testid="login-btn"
+            >
+              Login
+            </button>
+          </article>
+        </main>
+        <section
+          class="hide signup"
+          data-testid="register-form"
+        >
+          <div
+            class="signup-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Register
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="username"
+            >
+              <p>
+                 Username:
+              </p>
+              <input
+                class=""
+                id=""
+                name="username"
+                required=""
+                type="text"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <section
+          class="hide login"
+          data-testid="login-form"
+        >
+          <div
+            class="login-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Login
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <footer>
+          <p
+            class="attribution"
+          >
+            Design by
+             
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Top Weaver
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Authentication - Login > A user can logout 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    class="absolute-bg"
+  >
+    <div>
+      <div
+        class="App"
+        data-testid="app"
+      >
+        <div
+          data-testid="profile"
+        >
+          <article
+            class="img-logo"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="/src/assets/logo.png"
+            />
+          </article>
+           
+          <section
+            class="logo-area"
+          >
+            <h1>
+              Secure profile
+            </h1>
+          </section>
+          <main>
+            <article>
+              <section
+                class="logged-in"
+              >
+                <svg
+                  fill="none"
+                  height="150"
+                  stroke="#fff"
+                  viewBox="0 0 20 20"
+                  width="150"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    id="SVGRepo_bgCarrier"
+                    stroke-width="0"
+                  />
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <g
+                    id="SVGRepo_iconCarrier"
+                  >
+                    <path
+                      d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8536 6.14645C14.0488 6.34171 14.0488 6.65829 13.8536 6.85355L9.85355 10.8536C9.65829 11.0488 9.34171 11.0488 9.14645 10.8536L7.14645 8.85355C6.95118 8.65829 6.95118 8.34171 7.14645 8.14645C7.34171 7.95118 7.65829 7.95118 7.85355 8.14645L9.5 9.79289L13.1464 6.14645C13.3417 5.95118 13.6583 5.95118 13.8536 6.14645ZM7.5 13H12.4983C12.7744 13 12.9983 13.2239 12.9983 13.5C12.9983 13.7761 12.7744 14 12.4983 14H7.5C7.22386 14 7 13.7761 7 13.5C7 13.2239 7.22386 13 7.5 13Z"
+                      fill="#212121#fff"
+                    />
+                  </g>
+                </svg>
+                <h4
+                  class="welcome"
+                >
+                  Welcome, John Doe!
+                </h4>
+              </section>
+              <button
+                class="logout-btn"
+                data-testid="logout-btn"
+              >
+                Logout
+              </button>
+            </article>
+          </main>
+          <footer>
+            <p
+              class="attribution"
+            >
+              Design by
+               
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Top Weaver
+              </a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+      data-testid="app"
+    >
+      <div
+        data-testid="profile"
+      >
+        <article
+          class="img-logo"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="/src/assets/logo.png"
+          />
+        </article>
+         
+        <section
+          class="logo-area"
+        >
+          <h1>
+            Secure profile
+          </h1>
+        </section>
+        <main>
+          <article>
+            <section
+              class="logged-in"
+            >
+              <svg
+                fill="none"
+                height="150"
+                stroke="#fff"
+                viewBox="0 0 20 20"
+                width="150"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  id="SVGRepo_bgCarrier"
+                  stroke-width="0"
+                />
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <g
+                  id="SVGRepo_iconCarrier"
+                >
+                  <path
+                    d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM13.8536 6.14645C14.0488 6.34171 14.0488 6.65829 13.8536 6.85355L9.85355 10.8536C9.65829 11.0488 9.34171 11.0488 9.14645 10.8536L7.14645 8.85355C6.95118 8.65829 6.95118 8.34171 7.14645 8.14645C7.34171 7.95118 7.65829 7.95118 7.85355 8.14645L9.5 9.79289L13.1464 6.14645C13.3417 5.95118 13.6583 5.95118 13.8536 6.14645ZM7.5 13H12.4983C12.7744 13 12.9983 13.2239 12.9983 13.5C12.9983 13.7761 12.7744 14 12.4983 14H7.5C7.22386 14 7 13.7761 7 13.5C7 13.2239 7.22386 13 7.5 13Z"
+                    fill="#212121#fff"
+                  />
+                </g>
+              </svg>
+              <h4
+                class="welcome"
+              >
+                Welcome, John Doe!
+              </h4>
+            </section>
+            <button
+              class="logout-btn"
+              data-testid="logout-btn"
+            >
+              Logout
+            </button>
+          </article>
+        </main>
+        <footer>
+          <p
+            class="attribution"
+          >
+            Design by
+             
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Top Weaver
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Authentication - Login > Form Validation works as expected - email 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    class="absolute-bg"
+  >
+    <div>
+      <div
+        class="App"
+        data-testid="app"
+      >
+        <div>
+          <article
+            class="img-logo"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="/src/assets/logo.png"
+            />
+          </article>
+           
+          <section
+            class="logo-area"
+          >
+            <h1>
+              Secure your profile
+            </h1>
+          </section>
+          <main>
+            <article
+              class=""
+            >
+              <button
+                class="register-btn hide"
+                data-testid="register-btn"
+              >
+                Register
+              </button>
+              <button
+                class="login-btn hide"
+                data-testid="login-btn"
+              >
+                Login
+              </button>
+            </article>
+          </main>
+          <section
+            class="hide signup"
+            data-testid="register-form"
+          >
+            <div
+              class="signup-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Register
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="username"
+              >
+                <p>
+                   Username:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="username"
+                  required=""
+                  type="text"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class="errors-border"
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                >
+                  Please enter a valid email.
+                </p>
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <section
+            class="login"
+            data-testid="login-form"
+          >
+            <div
+              class="login-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Login
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class="errors-border"
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                >
+                  Please enter a valid email.
+                </p>
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <footer>
+            <p
+              class="attribution hide"
+            >
+              Design by
+               
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Top Weaver
+              </a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+      data-testid="app"
+    >
+      <div>
+        <article
+          class="img-logo"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="/src/assets/logo.png"
+          />
+        </article>
+         
+        <section
+          class="logo-area"
+        >
+          <h1>
+            Secure your profile
+          </h1>
+        </section>
+        <main>
+          <article
+            class=""
+          >
+            <button
+              class="register-btn hide"
+              data-testid="register-btn"
+            >
+              Register
+            </button>
+            <button
+              class="login-btn hide"
+              data-testid="login-btn"
+            >
+              Login
+            </button>
+          </article>
+        </main>
+        <section
+          class="hide signup"
+          data-testid="register-form"
+        >
+          <div
+            class="signup-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Register
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="username"
+            >
+              <p>
+                 Username:
+              </p>
+              <input
+                class=""
+                id=""
+                name="username"
+                required=""
+                type="text"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class="errors-border"
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              >
+                Please enter a valid email.
+              </p>
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <section
+          class="login"
+          data-testid="login-form"
+        >
+          <div
+            class="login-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Login
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class="errors-border"
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              >
+                Please enter a valid email.
+              </p>
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <footer>
+          <p
+            class="attribution hide"
+          >
+            Design by
+             
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Top Weaver
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Authentication - Login > Form Validation works as expected - password 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body
+    class="absolute-bg"
+  >
+    <div>
+      <div
+        class="App"
+        data-testid="app"
+      >
+        <div>
+          <article
+            class="img-logo"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="/src/assets/logo.png"
+            />
+          </article>
+           
+          <section
+            class="logo-area"
+          >
+            <h1>
+              Secure your profile
+            </h1>
+          </section>
+          <main>
+            <article
+              class=""
+            >
+              <button
+                class="register-btn hide"
+                data-testid="register-btn"
+              >
+                Register
+              </button>
+              <button
+                class="login-btn hide"
+                data-testid="login-btn"
+              >
+                Login
+              </button>
+            </article>
+          </main>
+          <section
+            class="hide signup"
+            data-testid="register-form"
+          >
+            <div
+              class="signup-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Register
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="username"
+              >
+                <p>
+                   Username:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="username"
+                  required=""
+                  type="text"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class="errors-border"
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                >
+                  Password must be at least 8 characters, and contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and atleast one special character(e.g. @$!%*#)
+                </p>
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <section
+            class="login"
+            data-testid="login-form"
+          >
+            <div
+              class="login-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Login
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class="errors-border"
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                >
+                  Password must be at least 8 characters, and contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and atleast one special character(e.g. @$!%*#)
+                </p>
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <footer>
+            <p
+              class="attribution hide"
+            >
+              Design by
+               
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Top Weaver
+              </a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+      data-testid="app"
+    >
+      <div>
+        <article
+          class="img-logo"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="/src/assets/logo.png"
+          />
+        </article>
+         
+        <section
+          class="logo-area"
+        >
+          <h1>
+            Secure your profile
+          </h1>
+        </section>
+        <main>
+          <article
+            class=""
+          >
+            <button
+              class="register-btn hide"
+              data-testid="register-btn"
+            >
+              Register
+            </button>
+            <button
+              class="login-btn hide"
+              data-testid="login-btn"
+            >
+              Login
+            </button>
+          </article>
+        </main>
+        <section
+          class="hide signup"
+          data-testid="register-form"
+        >
+          <div
+            class="signup-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Register
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="username"
+            >
+              <p>
+                 Username:
+              </p>
+              <input
+                class=""
+                id=""
+                name="username"
+                required=""
+                type="text"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class="errors-border"
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              >
+                Password must be at least 8 characters, and contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and atleast one special character(e.g. @$!%*#)
+              </p>
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <section
+          class="login"
+          data-testid="login-form"
+        >
+          <div
+            class="login-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Login
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class="errors-border"
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              >
+                Password must be at least 8 characters, and contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and atleast one special character(e.g. @$!%*#)
+              </p>
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <footer>
+          <p
+            class="attribution hide"
+          >
+            Design by
+             
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Top Weaver
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Authentication - Login > Response errors are handled correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+        data-testid="app"
+      >
+        <div>
+          <article
+            class="img-logo"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="/src/assets/logo.png"
+            />
+          </article>
+           
+          <section
+            class="logo-area"
+          >
+            <h1>
+              Secure your profile
+            </h1>
+          </section>
+          <main>
+            <article
+              class=""
+            >
+              <button
+                class="register-btn"
+                data-testid="register-btn"
+              >
+                Register
+              </button>
+              <button
+                class="login-btn"
+                data-testid="login-btn"
+              >
+                Login
+              </button>
+            </article>
+          </main>
+          <section
+            class="hide signup"
+            data-testid="register-form"
+          >
+            <div
+              class="signup-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Register
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="username"
+              >
+                <p>
+                   Username:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="username"
+                  required=""
+                  type="text"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <section
+            class="hide login"
+            data-testid="login-form"
+          >
+            <div
+              class="login-close"
+            >
+              <span
+                class="close-btn"
+              >
+                X
+              </span>
+            </div>
+            <h3>
+              Login
+            </h3>
+            <form
+              action=""
+            >
+              <label
+                for="email"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="email"
+                  required=""
+                  type="email"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <label
+                for="password"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=""
+                  id=""
+                  name="password"
+                  required=""
+                  type="password"
+                />
+                <p
+                  class="text-rose"
+                />
+              </label>
+              <button
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </section>
+          <footer>
+            <p
+              class="attribution"
+            >
+              Design by
+               
+              <a
+                href="https://portfolio-ms-app.onrender.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Top Weaver
+              </a>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+      data-testid="app"
+    >
+      <div>
+        <article
+          class="img-logo"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="/src/assets/logo.png"
+          />
+        </article>
+         
+        <section
+          class="logo-area"
+        >
+          <h1>
+            Secure your profile
+          </h1>
+        </section>
+        <main>
+          <article
+            class=""
+          >
+            <button
+              class="register-btn"
+              data-testid="register-btn"
+            >
+              Register
+            </button>
+            <button
+              class="login-btn"
+              data-testid="login-btn"
+            >
+              Login
+            </button>
+          </article>
+        </main>
+        <section
+          class="hide signup"
+          data-testid="register-form"
+        >
+          <div
+            class="signup-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Register
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="username"
+            >
+              <p>
+                 Username:
+              </p>
+              <input
+                class=""
+                id=""
+                name="username"
+                required=""
+                type="text"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <section
+          class="hide login"
+          data-testid="login-form"
+        >
+          <div
+            class="login-close"
+          >
+            <span
+              class="close-btn"
+            >
+              X
+            </span>
+          </div>
+          <h3>
+            Login
+          </h3>
+          <form
+            action=""
+          >
+            <label
+              for="email"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=""
+                id=""
+                name="email"
+                required=""
+                type="email"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <label
+              for="password"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=""
+                id=""
+                name="password"
+                required=""
+                type="password"
+              />
+              <p
+                class="text-rose"
+              />
+            </label>
+            <button
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+        <footer>
+          <p
+            class="attribution"
+          >
+            Design by
+             
+            <a
+              href="https://portfolio-ms-app.onrender.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Top Weaver
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  border: 0 none;
+  list-style: none outside none;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  background-image: url("../assets/login_background_desktop.png");
+  background-repeat: no-repeat;
+  background-color: rgb(203, 203, 227);
+  font-family: "Open Sans", sans-serif;
+  height: fit-content;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+}
+
+img.logo {
+  width: 15rem;
+  height: 18.5rem;
+}
+
+main {
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+main > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons {
+  height: 40px;
+}
+
+h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  color: #ffffff;
+}
+
+button {
+  width: 12.5rem;
+  height: 3.5rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  text-align: center;
+  border-radius: 14.5rem;
+  margin-top: 7.5rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: #a49372;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 14.75%;
+}
+
+.attribution a {
+  color: #f7f3f5;
+}
+
+img {
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+}
+
+.absolute-bg {
+  opacity: 0.97;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("../assets/login_background_mobile.png");
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+  }
+
+  .attribution {
+    margin-top: 68%;
+  }
+
+  button:hover {
+    color: #ffffff;
+    background-color: #679090;
+  }
+
+  .img-logo {
+    display: flex;
+    justify-content: center;
+  }
+}

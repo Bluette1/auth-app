@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const UsersController = require('../controllers/users');
+const checkJwt = require('../middleware/check-jwt');
+const checkUsername = require('../middleware/check-username');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/:id', [checkJwt], UsersController.getOneById);
+router.post('/', [checkUsername], UsersController.newUser);
 
 module.exports = router;

@@ -1,0 +1,111 @@
+###
+GET http://localhost:3001/
+
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"john.smith@gmail.com",
+    "username":"John Smith",
+    "password": "password4"
+  
+}
+
+
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"km.smith@gmail.com",
+    "username":"Kmia Smith",
+    "password": "password4"
+  
+}
+
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joyvibes@gmail.com",
+    "password": "password1",
+    "username":"JoyVibes"  
+}
+
+###
+
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joyesgmail.com",
+    "password": "password1",
+    "username":"Vibes"  
+}
+
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joybes@gmail.com",
+    "password": "fgrt",
+    "username":"ibes"  
+}
+
+###
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joyousfull@gmail.com",
+    "password": "fgrt",
+    "username":"jerkass"  
+}
+
+###
+
+POST  http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "email":"joyousfull@gmail.com",
+    "password": "Passerby1&",
+    "username":"joyousfull"  
+}
+
+###
+POST  http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "email": "jovibes@gmail.com",
+    "password": "password1"
+  
+}
+
+####
+POST  http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "email": "joyvibes@gmail.com",
+    "password": "password1"
+  
+}
+
+###
+
+GET http://localhost:3001/users/65adcecbe6e917e99d029ac5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkY2VjYmU2ZTkxN2U5OWQwMjlhYzUiLCJlbWFpbCI6ImpveXZpYmVzQGdtYWlsLmNvbSIsImlhdCI6MTcwNTg5MDE0OSwibmJmIjoxNzA1ODkwMTQ5LCJleHAiOjE3MDU4OTM3NDl9.kOK1zzUvvVbLmVicbn79U9fLnCa8laphKpCrY8QAHVI
+
+####
+
+GET http://localhost:3001/users/65adcecbe6e917e99d029ac5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWFkY2VjYmU2ZTkxN2U5OWQwMjlhYzUiLCJlbWFpbCI6ImpveXZpYmVzQGdtYWlsLmNvbSIsImlhdCI6MTcwNTk1MDAxOSwibmJmIjoxNzA1OTUwMDE5LCJleHAiOjE3MDU5NTM2MTl9.IG7MYsDbCOATxRDAWFub0LUeZbGSdlc6hOAsK79NZkU
+
+

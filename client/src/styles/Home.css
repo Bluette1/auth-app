@@ -1,0 +1,90 @@
+.hide {
+  display: none;
+}
+
+.signup, .login {
+  position: absolute;
+  top: 42%;
+  left: 35%;
+  z-index: 2000;
+  background-color: #587a7a;
+  padding: 2%;
+  margin: 3%;
+}
+
+.signup h3, .login h3 {
+  text-align: center;
+  color: #ffffff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+}
+
+input {
+  border-radius: 5rem;
+  height: 35px;
+  width: 22vw;
+  padding: 3%;
+}
+
+.signup button, .login button, .logout-btn {
+  margin-top: 3rem;
+}
+
+.close-btn {
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.text-rose {
+  color: rgb(184, 52, 52);
+  font-size: 1rem;
+}
+
+input.errors-border {
+  border: solid 1px rgb(184, 52, 52) !important;
+}
+
+.signup p, .login p {
+  width: 22vw;
+}
+
+@media only screen and (max-width: 1024px) {
+  .signup, .login {
+    left: 12%;
+    z-index: 2000;
+    padding: 6%;
+    margin: 1%;
+  }
+
+  input {
+    border-radius: 5rem;
+    height: 35px;
+    width: 45vw;
+    padding: 3%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .signup, .login {
+    top: 45%;
+    left: 8%;
+  }
+
+  input {
+    border-radius: 5rem;
+    height: 35px;
+    width: 70vw;
+    padding: 3%;
+  }
+}
