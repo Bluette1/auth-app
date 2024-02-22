@@ -8,7 +8,6 @@ exports[`Authentication - Signup > A user can sign up 1`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -205,7 +204,6 @@ exports[`Authentication - Signup > A user can sign up 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -457,11 +455,10 @@ exports[`Authentication - Signup > A user can sign up 2`] = `
 {
   "asFragment": [Function],
   "baseElement": <body
-    class="absolute-bg"
+    class=""
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -490,13 +487,13 @@ exports[`Authentication - Signup > A user can sign up 2`] = `
                 You have successfully registered.
               </p>
               <button
-                class="register-btn hide"
+                class="register-btn"
                 data-testid="register-btn"
               >
                 Register
               </button>
               <button
-                class="login-btn hide"
+                class="login-btn"
                 data-testid="login-btn"
               >
                 Login
@@ -642,7 +639,7 @@ exports[`Authentication - Signup > A user can sign up 2`] = `
           </section>
           <footer>
             <p
-              class="attribution hide"
+              class="attribution"
             >
               Design by
                
@@ -661,7 +658,6 @@ exports[`Authentication - Signup > A user can sign up 2`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -690,13 +686,13 @@ exports[`Authentication - Signup > A user can sign up 2`] = `
               You have successfully registered.
             </p>
             <button
-              class="register-btn hide"
+              class="register-btn"
               data-testid="register-btn"
             >
               Register
             </button>
             <button
-              class="login-btn hide"
+              class="login-btn"
               data-testid="login-btn"
             >
               Login
@@ -842,7 +838,7 @@ exports[`Authentication - Signup > A user can sign up 2`] = `
         </section>
         <footer>
           <p
-            class="attribution hide"
+            class="attribution"
           >
             Design by
              
@@ -920,7 +916,6 @@ exports[`Authentication - Signup > Form Validation works as expected 1`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -1117,7 +1112,6 @@ exports[`Authentication - Signup > Form Validation works as expected 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -1373,7 +1367,6 @@ exports[`Authentication - Signup > Form Validation works as expected 2`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -1570,7 +1563,6 @@ exports[`Authentication - Signup > Form Validation works as expected 2`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -1826,7 +1818,6 @@ exports[`Authentication - Signup > Form Validation works as expected 3`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -2023,7 +2014,6 @@ exports[`Authentication - Signup > Form Validation works as expected 3`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -2277,7 +2267,6 @@ exports[`Authentication - Signup > Response errors are handled correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -2474,7 +2463,6 @@ exports[`Authentication - Signup > Response errors are handled correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -2730,7 +2718,6 @@ exports[`Authentication - Signup > Response errors are handled correctly 2`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -2758,18 +2745,6 @@ exports[`Authentication - Signup > Response errors are handled correctly 2`] = `
               <p>
                 Sorry an error occurred. Try again.
               </p>
-              <button
-                class="register-btn hide"
-                data-testid="register-btn"
-              >
-                Register
-              </button>
-              <button
-                class="login-btn hide"
-                data-testid="login-btn"
-              >
-                Login
-              </button>
             </article>
           </main>
           <section
@@ -2909,28 +2884,13 @@ exports[`Authentication - Signup > Response errors are handled correctly 2`] = `
               </button>
             </form>
           </section>
-          <footer>
-            <p
-              class="attribution hide"
-            >
-              Design by
-               
-              <a
-                href="https://portfolio-ms-app.onrender.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Top Weaver
-              </a>
-            </p>
-          </footer>
+          <footer />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -2958,18 +2918,6 @@ exports[`Authentication - Signup > Response errors are handled correctly 2`] = `
             <p>
               Sorry an error occurred. Try again.
             </p>
-            <button
-              class="register-btn hide"
-              data-testid="register-btn"
-            >
-              Register
-            </button>
-            <button
-              class="login-btn hide"
-              data-testid="login-btn"
-            >
-              Login
-            </button>
           </article>
         </main>
         <section
@@ -3109,21 +3057,7 @@ exports[`Authentication - Signup > Response errors are handled correctly 2`] = `
             </button>
           </form>
         </section>
-        <footer>
-          <p
-            class="attribution hide"
-          >
-            Design by
-             
-            <a
-              href="https://portfolio-ms-app.onrender.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Top Weaver
-            </a>
-          </p>
-        </footer>
+        <footer />
       </div>
     </div>
   </div>,

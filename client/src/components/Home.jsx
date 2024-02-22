@@ -67,8 +67,6 @@ const Home = () => {
               return;
             }
 
-            const res = await response.json();
-
             setMessage('You have successfully registered.');
             const bodyEl = document.querySelector('body');
 
