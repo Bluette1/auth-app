@@ -8,7 +8,6 @@ exports[`Authentication - Login > A user can login 1`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -205,7 +204,6 @@ exports[`Authentication - Login > A user can login 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -461,7 +459,6 @@ exports[`Authentication - Login > A user can logout 1`] = `
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div
@@ -550,7 +547,6 @@ exports[`Authentication - Login > A user can logout 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div
@@ -698,7 +694,6 @@ exports[`Authentication - Login > Form Validation works as expected - email 1`] 
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -722,20 +717,7 @@ exports[`Authentication - Login > Form Validation works as expected - email 1`] 
           <main>
             <article
               class=""
-            >
-              <button
-                class="register-btn hide"
-                data-testid="register-btn"
-              >
-                Register
-              </button>
-              <button
-                class="login-btn hide"
-                data-testid="login-btn"
-              >
-                Login
-              </button>
-            </article>
+            />
           </main>
           <section
             class="hide signup"
@@ -878,28 +860,13 @@ exports[`Authentication - Login > Form Validation works as expected - email 1`] 
               </button>
             </form>
           </section>
-          <footer>
-            <p
-              class="attribution hide"
-            >
-              Design by
-               
-              <a
-                href="https://portfolio-ms-app.onrender.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Top Weaver
-              </a>
-            </p>
-          </footer>
+          <footer />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -923,20 +890,7 @@ exports[`Authentication - Login > Form Validation works as expected - email 1`] 
         <main>
           <article
             class=""
-          >
-            <button
-              class="register-btn hide"
-              data-testid="register-btn"
-            >
-              Register
-            </button>
-            <button
-              class="login-btn hide"
-              data-testid="login-btn"
-            >
-              Login
-            </button>
-          </article>
+          />
         </main>
         <section
           class="hide signup"
@@ -1079,21 +1033,7 @@ exports[`Authentication - Login > Form Validation works as expected - email 1`] 
             </button>
           </form>
         </section>
-        <footer>
-          <p
-            class="attribution hide"
-          >
-            Design by
-             
-            <a
-              href="https://portfolio-ms-app.onrender.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Top Weaver
-            </a>
-          </p>
-        </footer>
+        <footer />
       </div>
     </div>
   </div>,
@@ -1159,7 +1099,6 @@ exports[`Authentication - Login > Form Validation works as expected - password 1
   >
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -1183,20 +1122,7 @@ exports[`Authentication - Login > Form Validation works as expected - password 1
           <main>
             <article
               class=""
-            >
-              <button
-                class="register-btn hide"
-                data-testid="register-btn"
-              >
-                Register
-              </button>
-              <button
-                class="login-btn hide"
-                data-testid="login-btn"
-              >
-                Login
-              </button>
-            </article>
+            />
           </main>
           <section
             class="hide signup"
@@ -1339,28 +1265,13 @@ exports[`Authentication - Login > Form Validation works as expected - password 1
               </button>
             </form>
           </section>
-          <footer>
-            <p
-              class="attribution hide"
-            >
-              Design by
-               
-              <a
-                href="https://portfolio-ms-app.onrender.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Top Weaver
-              </a>
-            </p>
-          </footer>
+          <footer />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
@@ -1384,20 +1295,7 @@ exports[`Authentication - Login > Form Validation works as expected - password 1
         <main>
           <article
             class=""
-          >
-            <button
-              class="register-btn hide"
-              data-testid="register-btn"
-            >
-              Register
-            </button>
-            <button
-              class="login-btn hide"
-              data-testid="login-btn"
-            >
-              Login
-            </button>
-          </article>
+          />
         </main>
         <section
           class="hide signup"
@@ -1540,21 +1438,7 @@ exports[`Authentication - Login > Form Validation works as expected - password 1
             </button>
           </form>
         </section>
-        <footer>
-          <p
-            class="attribution hide"
-          >
-            Design by
-             
-            <a
-              href="https://portfolio-ms-app.onrender.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Top Weaver
-            </a>
-          </p>
-        </footer>
+        <footer />
       </div>
     </div>
   </div>,
@@ -1618,7 +1502,6 @@ exports[`Authentication - Login > Response errors are handled correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -1815,7 +1698,6 @@ exports[`Authentication - Login > Response errors are handled correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>

@@ -2,7 +2,8 @@
   display: none;
 }
 
-.signup, .login {
+.signup,
+.login {
   position: absolute;
   top: 42%;
   left: 35%;
@@ -10,9 +11,11 @@
   background-color: #587a7a;
   padding: 2%;
   margin: 3%;
+  opacity: 1;
 }
 
-.signup h3, .login h3 {
+.signup h3,
+.login h3 {
   text-align: center;
   color: #ffffff;
 }
@@ -36,7 +39,9 @@ input {
   padding: 3%;
 }
 
-.signup button, .login button, .logout-btn {
+.signup button,
+.login button,
+.logout-btn {
   margin-top: 3rem;
 }
 
@@ -56,12 +61,14 @@ input.errors-border {
   border: solid 1px rgb(184, 52, 52) !important;
 }
 
-.signup p, .login p {
+.signup p,
+.login p {
   width: 22vw;
 }
 
 @media only screen and (max-width: 1024px) {
-  .signup, .login {
+  .signup,
+  .login {
     left: 12%;
     z-index: 2000;
     padding: 6%;
@@ -76,7 +83,8 @@ input.errors-border {
   }
 }
 @media only screen and (max-width: 768px) {
-  .signup, .login {
+  .signup,
+  .login {
     top: 45%;
     left: 8%;
   }

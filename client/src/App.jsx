@@ -8,13 +8,10 @@ function App() {
   const { loggedIn } = useSelector((state) => state.auth);
 
   return (
-    <div data-testid="app" className="App">
+    <div data-testid="app">
       <Routes>
         <Route element={loggedIn ? <Profile /> : <Home />} path="/" />
-        <Route
-          path="/profile"
-          element={loggedIn ? <Profile /> : <Home />}
-        />
+        <Route path="/profile" element={loggedIn ? <Profile /> : <Home />} />
       </Routes>
     </div>
   );

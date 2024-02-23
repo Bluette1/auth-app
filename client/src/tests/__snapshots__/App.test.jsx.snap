@@ -6,7 +6,6 @@ exports[`App > should render the App 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="App"
         data-testid="app"
       >
         <div>
@@ -203,7 +202,6 @@ exports[`App > should render the App 1`] = `
   </body>,
   "container": <div>
     <div
-      class="App"
       data-testid="app"
     >
       <div>
